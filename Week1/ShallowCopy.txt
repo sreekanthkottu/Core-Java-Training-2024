@@ -1,0 +1,22 @@
+class Student{
+int rollno;
+String name;
+
+Student(int rollno, String name){
+this.rollno=rollno;
+this.name=name;
+}
+//overriding the predefined method in Object class
+public String toString() {
+return this.rollno + "    " +this.name;
+ } 
+
+public static void main(String args[])
+{
+
+Student s1= new Student(1,"akhil");
+Student s2=s1;
+System.out.println(s1==s2);
+
+}
+}

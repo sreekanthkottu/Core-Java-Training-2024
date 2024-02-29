@@ -1,0 +1,42 @@
+
+import java.lang.*;
+class Student{
+int rollno;
+String name;
+
+Student(int rollno, String name){
+this.rollno=rollno;
+this.name=name;
+}
+
+
+public boolean equals(Object obj) 
+{ 
+if(this == obj) 
+      return true; 
+if(obj == null || obj.getClass()!= this.getClass()) 
+      return false; 
+Student stud = (Student) obj; 
+return (stud.name == this.name && stud.rollno == this.rollno); 
+} 
+      
+public int hashCode(){ 
+    return this.rollno; 
+} 
+
+
+
+//overriding the predefined method in Object class
+public String toString() {
+return this.rollno + "    " +this.name;
+ } 
+
+public static void main(String args[]){
+
+Student s1= new Student(1,"akhil");
+Student s2= new Student(1,"akhil");
+
+System.out.println(s1.equals(s2));
+
+}
+}

@@ -1,0 +1,26 @@
+class Student implements Cloneable{
+int rollno;
+String name;
+
+Student(int rollno, String name){
+this.rollno=rollno;
+this.name=name;
+}
+//overriding the predefined method in Object class
+public String toString() {
+return this.rollno + "    " +this.name;
+ } 
+
+public static void main(String args[])
+{
+try{
+ 	Student s1= new Student(1,"akhil");
+	Student s2=(Student)s1.clone();
+	System.out.println(s1==s2);
+	System.out.println(s1.toString());
+	System.out.println(s1.toString());
+   }catch(CloneNotSupportedException e) {
+    e.printStackTrace();
+   }
+}
+}

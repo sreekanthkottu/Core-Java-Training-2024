@@ -1,0 +1,29 @@
+Task:
+Their exist two lines of input each consist of single integer, read these two integers using BufferedReader Class and then print both of them on a single line in a space-separated manner.
+Input Format
+Input consist of two lines.
+Both of the lines contains a single integer.
+Output Format
+Print both of the integers on a single line in a space-separated manner.
+Example Input
+Input 1:
+ 12
+ 1
+Output:
+ 12  1
+
+Solution:-
+
+import java.lang.*;
+import java.util.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+class Test {
+    public static void main(String[] args) throws IOException {
+    BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+    String s1=reader.readLine();
+    String s2=reader.readLine();
+    System.out.println(s1+" "+s2); 
+    }
+}

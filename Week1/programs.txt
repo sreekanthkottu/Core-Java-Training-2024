@@ -1,0 +1,196 @@
+main() method can be overloaded but not overridden
+
+Task:
+Swapping 2 numbers without using a 3rd variable
+
+Method1:Using Temporary Variable
+To swap two numbers using third variable we have to declare a temp variable.
+temp=x; //contains of x will be assigned to temp
+Again y value we will assign to x .x value will be replaced with y value.
+x=y;
+Now temp value we will assign to y .
+y=temp;
+
+Method2:Without Using the Temporary Variable – Addition & Subtraction Operators
+
+Way 1:
+x=x+y;
+y=x-y;
+x=x-y;
+
+Way 2:
+a = (a + b) - (b = a);
+
+Method3:Without Using the Temporary Variable – Bitwise XOR Operator (^)
+x=x^y
+y=x^y
+x=x^y
+
+Method4:Without Using the Temporary Variable – Multiplication & Division Operators
+
+Way 1:
+a = a * b;
+b = a / b;
+a = a / b;
+
+Way 2:
+a = (a * b) / (b = a);
+
+
+
+Task:
+Print all the arguments passed from the command-line
+Input:-java CmdLineArgs  This is command line argument program
+
+class CmdLineArgs{  
+public static void main(String args[]){  
+for(int i=0;i<args.length;i++)  
+System.out.println(args[i]);  
+}  
+}  
+Output:-
+This 
+is 
+command
+line
+argument
+program
+
+
+
+Task:
+Their exist two lines of input each consist of single integer, read these two integers using BufferedReader Class and then print both of them on a single line in a space-separated manner.
+Input Format
+Input consist of two lines.
+Both of the lines contains a single integer.
+Output Format
+Print both of the integers on a single line in a space-separated manner.
+Example Input
+Input 1:
+ 12
+ 1
+Output:
+ 12  1
+Solution:-
+import java.lang.*;
+import java.util.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+class Test {
+    public static void main(String[] args) throws IOException {
+    BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+    String s1=reader.readLine();
+    String s2=reader.readLine();
+    System.out.println(s1+" "+s2); 
+    }
+}
+
+
+Task:
+Write a Java program to print the Climatic Season of your place.
+Months    Season
+12,1,2	     Winter
+3,4,5	     Spring
+6,7,8	     Summer
+9,10,11    Monsoon
+Anything else entered - "Invalid Month"
+
+
+
+
+
+Task
+Pyramid Program
+    * 
+   * * 
+  * * * 
+ * * * * 
+* * * * *
+
+
+public class Pyramid2
+{  
+    public static void pyramidPattern(int n) 
+    {  
+        for (int i=0; i<n; i++) //outer loop for number of rows(n) { 
+		for (int j=n-i; j>1; j--) //inner loop for spaces
+            	{ 
+                System.out.print(" "); //print space
+            	}  
+            	for (int j=0; j<=i; j++ ) //inner loop for number of columns
+            	{ 
+                System.out.print("* "); //print star
+            	} 
+            System.out.println(); //ending line after each row
+        } 
+    } 
+   public static void main(String args[]) //driver function
+    { 
+        int n = 5; 
+        pyramidPattern(n); 
+    } 
+}
+
+Task 
+Number Pattern Program in java
+1 
+2 3 
+4 5 6 
+7 8 9 10 
+11 12 13 14 15 
+
+
+
+
+Task:
+Write a Java program to read the following inputs from the user - Name, Rollno, height and weight. And check whether the height is greater than 170 and weight is less than 60kgs. If these conditions are satisfied the candidate is eligible to become an NCC cadet, otherwise print not eligible
+
+
+
+
+Task :
+Create a student class with roll number, name & address as data members, initialize  and display student details
+
+class Student{  
+ int rollno;               // Instatnce variables
+ String name;
+ String address;  
+ Student(){                             // Default Constructor
+    this.address="MRUH";
+ }
+ Student(int r,String n){       // Parameterized Constructor (2 argument)
+     this();        		   // refers the default constructor 
+     this.rollno=r;
+     this.name=n;
+  }
+ Student(int r,String n, String a){      // Parameterized Constructor   (3 argument)
+     this.rollno=r;
+     this.name=n;
+     this.address=a;
+ }
+ void addStudentRecord(int r, String n,String a){        // Instance method
+  rollno=r;  
+  name=n; 
+  address=a;
+ }  
+ void displayDetails()                                                 // Instance method
+ {
+     System.out.println(rollno+" "+name+" "+address);
+ }  
+}
+class Test{  
+ public static void main(String args[]){  
+  Student s1=new Student(101,"Akhil","HYD");  
+  Student s2=new Student(102,"Bindhu");  
+  Student s3=new Student(); 
+  s3.addStudentRecord(103,"Chanran","SEC");  
+  s1.displayDetails();  
+  s2.displayDetails();  
+  s3.displayDetails(); 
+ }  
+} 
+
+
+
+

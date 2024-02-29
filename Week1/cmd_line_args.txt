@@ -1,0 +1,19 @@
+Task:
+Print all the arguments passed from the command-line
+
+
+class CmdLineArgs{  
+ public static void main(String args[]){  
+	for(int i=0;i<args.length;i++)  
+		System.out.println(args[i]);  
+ }  
+} 
+
+Input:-java CmdLineArgs  This is command line argument program 
+Output:-
+This 
+is 
+command
+line
+argument
+program

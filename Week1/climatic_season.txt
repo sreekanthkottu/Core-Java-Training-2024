@@ -1,0 +1,59 @@
+Task:
+Write a Java program to print the Climatic Season of your place.
+Months    Season
+12,1,2	     Winter
+3,4,5	     Spring
+6,7,8	     Summer
+9,10,11    Monsoon
+Anything else entered - "Invalid Month"
+
+
+
+import java.util.*;   
+  public class IfElseDemo   
+  {   
+    public static void main(String args[])   
+    {   
+       System.out.print("Which Seasons: ");   
+       Scanner in = new Scanner(System.in);   
+       int month = in.nextInt();   
+       String M=" ";   
+       if(month==12||month==1||month==2)   
+       M="Winter";   
+       else if(month==3||month==4||month==5)   
+       M="Spring";   
+       else if(month==6||month==7||month==8)   
+       M="Summer";   
+       else if(month==9||month==10||month==11)   
+       M="Monsoon";   
+       else if(month>12 ||month <1)   
+       {   
+         System.out.print("Invalid Month");   
+         return;   
+       }   
+               
+             switch(M)  
+             {       
+                     case "Winter":  
+                     System.out.print("Season: Winter");  
+                     break;  
+                       
+                     case "Spring":  
+                     System.out.print("Season: Spring");  
+                     break;  
+                       
+                     case "Summer":  
+                     System.out.print("Season: Summer");  
+                     break;  
+                       
+                     case "Autumn":  
+                     System.out.print("Season: Monsoon");  
+                     break;  
+                       
+             }   
+    }   
+  }   
+   
+
+
+

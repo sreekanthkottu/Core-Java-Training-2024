@@ -1,0 +1,44 @@
+
+Task:
+Write a Java program to read the following inputs from the user - Name, Rollno, height and weight.
+ And check whether the height is greater than 170 and weight is less than 60kgs. 
+If these conditions are satisfied the candidate is eligible to become an NCC cadet, otherwise print not eligible
+
+
+import java.util.Scanner;
+ 
+public class NCC
+{
+    public static void main(String args[])  throws Exception
+    {
+        String name;
+        int age;
+        float weight;
+        float height;
+         
+        Scanner SC=new Scanner(System.in);
+         
+        System.out.print("Enter name: ");
+        name= SC.nextLine();
+         
+        System.out.print("Enter age: ");
+        age=SC.nextInt();
+ 
+        System.out.print("Enter weight in kgs: ");
+        weight=SC.nextFloat();
+        
+        System.out.print("Enter height in : ");
+        height=SC.nextFloat();
+         
+         
+         if (height>170 && weight<60)
+         {
+            System.out.println("Eligible to become an NCC cadet");
+         }
+         else
+         {
+             System.out.println("Not eligible to become an NCC cadet");
+         }
+   
+    }
+}
