@@ -1,0 +1,30 @@
+interface RBI{
+void rateOfInterest();
+}
+
+
+class HDFC implements RBI{
+public void rateOfInterest(){
+System.out.println("HDFC Bank rate of Interset is 10%");
+}
+}
+
+class SBI implements RBI{
+public void rateOfInterest(){
+System.out.println("SBI Bank rate of Interset is 9.5%");
+}
+}
+
+class ICICI implements RBI{
+public void rateOfInterest(){
+System.out.println("ICICI Bank rate of Interset is 10.5%");
+}
+}
+
+class Test{
+public static void main(String args[]){
+RBI  b1=new SBI();
+b1.rateOfInterest();
+
+}
+}

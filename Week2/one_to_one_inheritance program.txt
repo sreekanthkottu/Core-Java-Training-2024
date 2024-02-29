@@ -1,0 +1,55 @@
+
+import java.text.SimpleDateFormat;  
+import java.util.Date; 
+class Passport {
+ private String passportNo;
+ private Date dateOfIssue;
+ private Date dateOfExpiry;
+
+
+Passport(String passportNo, Date dateOfIssue, Date dateOfExpiry){
+ this.passportNo=passportNo;
+ this.dateOfIssue=dateOfIssue;
+this.dateOfExpiry=dateOfExpiry;
+}
+
+String tostring(){
+return this.passportNo + this.dateOfIssue + this.dateOfExpiry;
+}
+
+}
+ 
+class Person {
+ private String firstName;
+ private String lastName;
+ private Passport passport;
+ Person (String firstName, String lastName,Passport passport){
+this.firstName=firstName;
+this.lastName=lastName;
+this.passport=passport;
+}
+
+Passport getPassport(){
+return this.passport;
+}
+
+public void print(){
+System.out.println("Passport Details"+ this.firstName+"-"+ this.lastName+" - "+passport.toString());
+}
+
+}
+
+public class Test {
+public static void main(String[] args) throws Exception {
+  
+  Date dateOfIssue = new SimpleDateFormat("dd/mm/yyyy").parse("01/01/2010");
+  Date dateOfExpiry = new SimpleDateFormat("dd/mm/yyyy").parse("01/01/2020");
+  
+  Passport passport = new Passport("ABC123",dateOfIssue, dateOfExpiry  );
+
+  
+  Person person = new Person("praveen","kumar", passport);
+
+person .print();
+ }    
+}

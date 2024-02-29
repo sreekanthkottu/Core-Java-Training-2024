@@ -1,0 +1,43 @@
+class Person{
+private String name;
+private String email;
+private char gender;
+
+Person(String name, String email, char gender){
+this.name=name;
+this.email=email;
+this.gender=gender;
+}
+
+void setName(String name){
+this.name=name;
+}
+String getName(){
+return this.name;
+}
+
+void setEmail(String email){
+this.email=email;
+}
+String getEmail(){
+return this.email;
+}
+
+void setGender(char gender){
+this.gender=gender;
+}
+char getGender(){
+return this.gender;
+}
+
+public String toString(){
+return this.getName()+" ("+this.getGender()+") at "+this.getEmail();
+}
+public static void main(String args[]){
+Person p1=new Person("Rahul", "Default@demo.com",'m');
+p1.setEmail("Rahul@mallareddyuniversity.com");
+
+System.out.println(p1.toString());
+
+}
+}

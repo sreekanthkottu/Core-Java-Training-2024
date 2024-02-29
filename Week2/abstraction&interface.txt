@@ -1,0 +1,48 @@
+interface Printable{    // its interface since it has no implementation methods
+    void print();
+}
+
+abstract class Person implements Printable{   // its abstract class since it does not give 
+String name;                        //implementation of print() method of Printable interface
+char gender;
+String email;        // to make them accessable by the child class we use default access specifier
+Person(String name, char gender, String email ){
+    this.name=name;
+    this.gender=gender;
+    this.email=email;
+}
+}
+
+
+class Staff extends Person {
+  private Double sallary;
+  Staff(String name, char gender, String email, Double sallary){
+      super( name,  gender, email);
+      this.sallary=sallary;
+  }
+  public void print(){
+System.out.println("Staff:-"+ this.name+"-"+ this.gender+" - "+this.email+"- "+this.sallary);
+}
+
+}
+
+class Student extends Person {
+  private Byte grade;
+    Student(String name, char gender, String email, Byte grade){
+      super( name,  gender,  email);
+      this.grade=grade;
+  }
+  public void print(){
+System.out.println("Student:- "+ this.name+"-"+ this.gender+" - "+this.email+"- " +this.grade);
+}
+}
+
+
+public class Test1 {
+    public static void main(String[] args) {
+   Student s=new Student("ram",'m',"demo@demo.com",(byte) 'A');
+   Staff st=new Staff("rahul",'m',"demo@demo.com",(double) 50000);
+   s.print();
+   st.print();
+ }    
+}

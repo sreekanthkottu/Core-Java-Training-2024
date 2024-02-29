@@ -1,0 +1,32 @@
+class Person{
+String name;
+String email;
+char gender;
+
+Person(String name, String email, char gender){
+this.name=name;
+this.email=email;
+this.gender=gender;
+}
+
+}
+
+class Student extends Person{
+  private Byte grade;
+    Student(String name, String email, char gender, Byte grade){
+      super( name,  email, gender);
+      this.grade=grade;
+  }
+public void print(){
+System.out.println("Student:- "+ super.name+"-"+ super.gender+" - "+super.email+"- " +this.grade);
+}
+}
+
+public class Test {
+    public static void main(String[] args) {
+   Student s1=new Student("ram","demo@demo.com",'m',(byte) 'A');
+   Student s2=new Student("rahul","demo@demo.com",'m',(byte) 'B');
+   s1.print();
+   s2.print();
+ }    
+}
