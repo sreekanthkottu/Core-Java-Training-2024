@@ -1,0 +1,35 @@
+public class StringReverse{
+
+    public static String reverse(String input) {
+
+        if (input == null) return null;
+
+        StringBuilder output = new StringBuilder();
+
+        for (int i = input.length() - 1; i >= 0; i--) {
+            output.append(input.charAt(i));
+        }
+
+        return output.toString();
+    }
+
+    public static void main(String[] args){
+//reversing single word using reverse()
+        String text = "java";
+StringBuilder sb= new StringBuilder(text);
+System.out.println("Original string -using reverse() " + text);
+System.out.println("Reversed string - " + sb.reverse());
+//reversing single word
+        String text1 = "java";
+        System.out.println("Original string - " + text1);
+        System.out.println("Reversed string - without using reverse()" + reverse(text1));
+//reversing miltiple words 
+        String text2 = "java programming";
+        String[] words=text2.split(" ");
+        System.out.println("Original string - " + text);
+        for(String word: words){
+             System.out.println("Reversed multi word string -without using reverse() " + reverse(word));
+        }
+
+    }
+}
